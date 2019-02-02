@@ -26,5 +26,8 @@ app.use(function(err,req,res,next){
 
 //listen to requests
 
- app.listen(3000);
-  console.log('listening on port 3000');
+ const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function() {
+  console.info(`listening on port ${PORT}`);
+});
